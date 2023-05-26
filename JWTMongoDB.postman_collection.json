@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "7e8ac738-ef1a-4cde-8754-ccadd1445b91",
+		"name": "JWTMongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17147091",
+		"_collection_link": "https://universal-escape-976290.postman.co/workspace/My-Workspace~f39f5d80-680b-4146-8a75-9fb5d8a78754/collection/17147091-7e8ac738-ef1a-4cde-8754-ccadd1445b91?action=share&creator=17147091&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Fabian Herreño\",\r\n    \"email\": \"fabian@gmail.com\",\r\n    \"password\": \"Weizmanc1998*\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"fabian@gmail.com\",\r\n    \"password\": \"Weizmanc1998*\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAccessToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDcxMGFkNjEyMDZlODM5NTJmMzJjZDIiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTY4NTEzOTU1NywiZXhwIjoxNjg3NzMxNTU3fQ.5ehGKXw7Z24H_iFIMq-ImiNRTP2egFrUl2uVJT7ldXc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/refreshToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"refreshToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDcxMGFkNjEyMDZlODM5NTJmMzJjZDIiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTY4NTEzOTYzOSwiZXhwIjoxNjg3NzMxNjM5fQ.3AhchjLE5m_7c4t2_MokLHI_xnlOvPoFOPd4TOaZoSU\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/refreshToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"refreshToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDcxMGFkNjEyMDZlODM5NTJmMzJjZDIiLCJyb2xlcyI6WyJ1c2VyIl0sImlhdCI6MTY4NTEzOTU1NywiZXhwIjoxNjg1MTQwMzk3fQ.kkHLXEuS-a6WiTLIrC7nS6N6NECNAhvPR5fjMxJ_h9s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/users/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"details"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
